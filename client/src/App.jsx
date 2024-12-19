@@ -5,10 +5,14 @@ import { injected } from 'wagmi/connectors'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import WalletConnector from './components/wallets/WalletConnector'
 import WalletSelectorModal from './components/wallets/WalletSelectorModal'
-import {Navbar, Welcome} from "./components/index"
+import { Navbar, Welcome } from "./components/index"
+import WalletAddress from "./components/utils/WalletAddress.jsx"
+import User from "./components/utils/User.jsx"
 
+import { Toaster } from 'react-hot-toast'
 
 const queryClient = new QueryClient()
+
 
 export const config = createConfig({
   chains: [mainnet, sepolia],
@@ -29,8 +33,16 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <div className="min-h-screen overflow-y-hidden">
           <div className="gradient-bg-welcome overflow-hidden">
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+            />
+            <WalletAddress />
             <Navbar />
-            <Welcome />
+            <div className='flex flex-col-reverse'>
+              <User />
+              <Welcome />
+            </div>
           </div>
         </div>
 
