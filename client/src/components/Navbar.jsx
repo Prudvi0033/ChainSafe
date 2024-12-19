@@ -1,5 +1,4 @@
 import React from 'react';
-import { SiHiveBlockchain } from "react-icons/si";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react"
 import {useUser} from "@clerk/clerk-react"
 
@@ -11,8 +10,8 @@ const Navbar = () => {
     <div className="w-full flex justify-between items-center p-4">
       <div className="flex items-center ml-10">
         <button className="inline-flex h-12 items-center justify-center px-6 font-medium text-gradient">
-          <div className='flex'><SiHiveBlockchain fontSize={30} color='#fff' />
-            <span className='text-2xl ml-1 font-bold'>Chain Safe</span>
+          <div className='flex text-lg lg:text-4xl lg:mt-5'>
+            <span className='ml-1 font-bold'>Chain Safe</span>
           </div>
         </button>
       </div>
