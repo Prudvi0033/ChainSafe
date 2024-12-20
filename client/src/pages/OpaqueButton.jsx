@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const OpaqueButton = () => {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 w-full max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-8 w-full mt-2 max-w-4xl mx-auto">
             <Link to={"/store"} className="col-span-1 sm:col-span-2">
                 <button
                     className="h-32 w-full p-4 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300 flex flex-col justify-between hover:bg-opacity-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] group"

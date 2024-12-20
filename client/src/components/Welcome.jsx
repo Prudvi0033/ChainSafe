@@ -24,15 +24,15 @@ const Welcome = () => {
             Your assets, encrypted and safeguarded, with the power of decentralized security.
           </p>
 
-          <div className="hidden lg:block w-full container mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+          <div className="hidden lg:block w-full container mx-auto mt-20 px-4 sm:px-6 lg:px-6">
             <Flow />
           </div>
         </div>
 
         {/* Right Section */}
         <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
-          <div className="p-3 justify-end items-start flex-col rounded-xl h-48 sm:w-72 w-full my-5 lg:w-[22rem] eth-card white-glassmorpism">
-            <div className="flex justify-between flex-col w-full h-full">
+          <div className="p-3 justify-end items-start flex-col rounded-xl h-48 sm:w-72 w-full my-2 lg:w-[22rem] eth-card white-glassmorpism">
+            <div className="flex justify-between flex-col w-full h-full gap-2">
               <div className="flex justify-between items-start">
                 <div
                   className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center"
