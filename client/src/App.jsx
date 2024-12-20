@@ -34,7 +34,7 @@ function App() {
         <div className="min-h-screen overflow-y-hidden">
           <div className="gradient-bg-welcome overflow-hidden">
             <Toaster
-              position="top-center"
+              position="bottom-center"
               reverseOrder={false}
             />
             <WalletAddress />

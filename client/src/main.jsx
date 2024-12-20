@@ -4,7 +4,6 @@ import React from 'react'
 import App from './App.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 
-import Send from "./components/Send.jsx"
 import Store from "./components/Store.jsx"
 import View from "./components/View.jsx"
 import Verify from "./components/Verify.jsx"
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
   {
     path : "/",
     element: <App/>,
-  },
-  {
-    path : "/send",
-    element : <Send/>
   },
   {
     path : "/store",
