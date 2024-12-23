@@ -96,8 +96,6 @@ const Store = () => {
           >
             Store Document
           </button>
-          {fileHash}
-          {renderDocs()}
         </div>
       </div>
     </div>

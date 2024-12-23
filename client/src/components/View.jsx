@@ -34,7 +34,6 @@ const View = () => {
 
   return (
     <div>
-      <h2>Documents in Another Component</h2>
       {error && <p className="text-red-500">{error}</p>}
       <DisplayDocs documents={documents} isLoading={isLoading} />
     </div>
