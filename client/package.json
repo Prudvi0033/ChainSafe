@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.20.4",
-    "@tanstack/react-query": "^5.62.8",
+    "@tanstack/react-query": "^5.62.9",
     "@wagmi/core": "^2.16.0",
     "appwrite": "^14.0.1",
     "ethers": "^6.13.4",
@@ -20,8 +20,8 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.4.0",
     "react-toast": "^1.0.3",
-    "viem": "^2.21.55",
-    "wagmi": "^2.14.4",
+    "viem": "^2.21.57",
+    "wagmi": "^2.14.6",
     "zustand": "^5.0.2"
   },
   "devDependencies": {
