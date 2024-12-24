@@ -97,7 +97,6 @@ const Store = () => {
             Store Document
           </button>
         </div>
-        {walletAddress}
       </div>
     </div>
   );
