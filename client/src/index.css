@@ -101,6 +101,18 @@ body {
   );
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  border: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
 
 
 @tailwind base;
