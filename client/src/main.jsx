@@ -13,8 +13,9 @@ import { ClerkProvider } from '@clerk/clerk-react';
 import { WagmiProvider, createConfig, http } from 'wagmi'
 import { mainnet, sepolia } from 'wagmi/chains'
 import { injected } from 'wagmi/connectors'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-
+const queryClient = new QueryClient();
 
 export const config = createConfig({
   chains: [mainnet, sepolia],
@@ -61,7 +62,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ClerkProvider publishableKey={publishableKey} afterSignOutUrl="/">
       <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
+        </QueryClientProvider>
       </WagmiProvider>
     </ClerkProvider>
   </React.StrictMode>,
