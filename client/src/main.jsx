@@ -10,6 +10,25 @@ import Verify from "./components/Verify.jsx"
 import { ClerkProvider } from '@clerk/clerk-react';
 
 
+import { WagmiProvider, createConfig, http } from 'wagmi'
+import { mainnet, sepolia } from 'wagmi/chains'
+import { injected } from 'wagmi/connectors'
+
+
+
+export const config = createConfig({
+  chains: [mainnet, sepolia],
+  connectors: [
+    injected()
+  ],
+  autoConnect: true, 
+  transports: {
+    [mainnet.id]: http(),
+    [sepolia.id]: http(),
+  },
+});
+
+
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!publishableKey) {
@@ -41,7 +60,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ClerkProvider publishableKey={publishableKey} afterSignOutUrl="/">
-      <RouterProvider router={router} />
+      <WagmiProvider config={config}>
+        <RouterProvider router={router} />
+      </WagmiProvider>
     </ClerkProvider>
   </React.StrictMode>,
 )

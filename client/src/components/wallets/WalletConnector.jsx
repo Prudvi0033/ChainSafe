@@ -1,11 +1,18 @@
+import { useAccount } from 'wagmi'
 import metamask from "./metamask.svg"
+import toast from 'react-hot-toast'
 
 function WalletConnector({ onOpenModal }) {
+    const { isConnected } = useAccount()
+
+    if(isConnected) return null;
+
+
     return (
         <div
             className="z-0 absolute w-full"
             style={{
-                top: '18rem', // Default for large screens
+                top: '18rem',
                 left: '0px',
             }}
         >
@@ -18,7 +25,6 @@ function WalletConnector({ onOpenModal }) {
                 Connect With Metamask
             </button>
         </div>
-
     )
 }
 
