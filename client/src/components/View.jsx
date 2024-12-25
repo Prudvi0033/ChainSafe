@@ -25,7 +25,7 @@ const View = () => {
     setError(null);
 
     databases
-      .listDocuments('67695f7700218d76597c', '67695f8b0010ccc83277')
+      .listDocuments(import.meta.env.VITE_APPWRITE_DATABASEID,import.meta.env.VITE_APPWRITE_COLLECTIONID,)
       .then((response) => {
         setDocuments(response.documents.filter(doc => doc.Authority === userid));
         setIsLoading(false);
