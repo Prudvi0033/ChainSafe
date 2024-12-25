@@ -10,7 +10,7 @@ const DisplayDocs = ({ documents, isLoading }) => {
   }
 
   return (
-    <div className="text-white h-svh w-full p-7 flex flex-col shadow-md gradient-bg-transactions">
+    <div className="text-white w-full p-7 flex flex-col shadow-md gradient-bg-transactions">
       <h2 className="font-bold mb-4 text-center text-4xl text-gradient">Document Details</h2>
       {documents.map((document, index) => (
         <div key={index} className="mb-4 break-words p-2 lg:p-4 w-full white-glassmorphism rounded shadow">

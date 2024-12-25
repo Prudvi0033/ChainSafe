@@ -10,7 +10,7 @@ import { Client, Databases, ID } from "appwrite";
 import DisplayDocs from '../pages/DisplayDocs';
 
 const client = new Client();
-client.setProject('67695e4200020f68eb7b');
+client.setProject(import.meta.env.VITE_APPWRITE_PROJECTID);
 
 const databases = new Databases(client);
 
@@ -34,8 +34,8 @@ const Store = () => {
 
     databases
       .createDocument(
-        '67695f7700218d76597c',
-        '67695f8b0010ccc83277',
+        import.meta.env.VITE_APPWRITE_DATABASEID,
+        import.meta.env.VITE_APPWRITE_COLLECTIONID,
         ID.unique(),
         newDocument
       )
