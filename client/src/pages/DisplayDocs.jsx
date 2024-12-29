@@ -2,15 +2,15 @@ import React from 'react';
 
 const DisplayDocs = ({ documents, isLoading }) => {
   if (isLoading) {
-    return <div className="w-full h-screen text-center gradient-bg-transactions text-white text-4xl">Loading document data...</div>;
+    return <div className="w-full  text-center gradient-bg-transactions text-white text-4xl">Loading document data...</div>;
   }
 
   if (!documents || documents.length === 0) {
-    return <div className="w-full h-screen text-center gradient-bg-transactions text-white text-4xl">No document data available</div>;
+    return <div className="w-full text-center gradient-bg-transactions text-white text-4xl">No document data available</div>;
   }
 
   return (
-    <div className="text-white w-full p-7 flex flex-col shadow-md gradient-bg-transactions">
+    <div className="text-white w-full p-7 flex flex-wrap flex-col shadow-md gradient-bg-transactions">
       <h2 className="font-bold mb-4 text-center text-4xl text-gradient">Document Details</h2>
       {documents.map((document, index) => (
         <div key={index} className="mb-4 break-words p-2 lg:p-4 w-full white-glassmorphism rounded shadow">
@@ -31,7 +31,7 @@ const DisplayDocs = ({ documents, isLoading }) => {
             <p>
               {document.Transaction_Hash ? (
                 <a
-                  href={`https://etherscan.io/tx/${document.Transaction_Hash}`}
+                  href={`https://sepolia.etherscan.io/tx/${document.Transaction_Hash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 underline"
