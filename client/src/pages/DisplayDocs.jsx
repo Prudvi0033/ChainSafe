@@ -2,11 +2,11 @@ import React from 'react';
 
 const DisplayDocs = ({ documents, isLoading }) => {
   if (isLoading) {
-    return <div className="w-full  text-center gradient-bg-transactions text-white text-4xl">Loading document data...</div>;
+    return <div className="w-full h-screen  text-center gradient-bg-transactions text-white text-4xl">Loading document data...</div>;
   }
 
   if (!documents || documents.length === 0) {
-    return <div className="w-full text-center gradient-bg-transactions text-white text-4xl">No document data available</div>;
+    return <div className="w-full h-screen text-center gradient-bg-transactions text-white text-4xl">No document data available</div>;
   }
 
   return (
