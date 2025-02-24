@@ -19,6 +19,7 @@
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.4.0",
+    "react-router-dom": "^7.2.0",
     "react-toast": "^1.0.3",
     "viem": "^2.21.57",
     "wagmi": "^2.14.6",
