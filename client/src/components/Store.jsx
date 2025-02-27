@@ -91,7 +91,7 @@ const Store = () => {
   const { walletAddress } = useAddressStore();
 
   const [documents, setDocuments] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); 
 
   const { writeContract, data: hash, error, isPending, isError } = useWriteContract();
 

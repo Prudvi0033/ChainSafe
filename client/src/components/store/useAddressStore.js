@@ -5,4 +5,4 @@ const useAddressStore = create((set) => ({
     setwalletAddress : (addr) => set(() => ({walletAddress : addr}))
 }))
 
-export default useAddressStore;
+export default useAddressStore; 

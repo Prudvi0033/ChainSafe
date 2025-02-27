@@ -9,7 +9,7 @@ const WalletAddress = () => {
 
     useEffect(() => {
         if(isConnected){
-            setwalletAddress(address)
+            setwalletAddress(address) 
         }
     },[address, isConnected, walletAddress, setwalletAddress])
 
