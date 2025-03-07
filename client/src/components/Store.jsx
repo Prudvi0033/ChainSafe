@@ -11,7 +11,7 @@ import { useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 
 const client = new Client();
 client.setProject('67695e4200020f68eb7b');
-
+client.setEndpoint('https://cloud.appwrite.io/v1')
 const databases = new Databases(client);
 
 const contractAbi = [

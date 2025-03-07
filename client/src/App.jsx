@@ -15,7 +15,7 @@ export const config = createConfig({
   chains: [mainnet, sepolia],
   connectors: [
     metaMask({
-      projectId: "YOUR_PROJECT_ID", // Replace with your project ID if using WalletConnect
+      projectId: "YOUR_PROJECT_ID", 
       preferred: true,
     }),
   ],
